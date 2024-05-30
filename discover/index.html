@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .hidden { display: none; }
+        .block { display: block; }
+    </style>
+  </head>
+  <body class="">
+    <header class="header">
+      <nav class="header-navbar w-full flex flex-row item-center py-3 fixed">
+        <div class="container mx-auto flex flex-row item-center justify-between">
+          <img
+            alt=""
+            src="./assert/logo.png"
+          
+            class="py-3 m-2"
+          />
+
+          <div class="flex items-center lg:order-2">
+            <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+         </div>
+          <div class="hidden"  id="mobile-menu-2">
+            <ul
+            class="navbar-button list-none grid grid-cols-7 bg-red text-sm text-white " 
+          >
+            <li class="flex justify-center items-center">
+              <button class="px-5 py-2 m-2 uppercase rounded-lg">Home</button>
+            </li>
+            <li class="flex justify-center items-center">
+              <button class="px-5 py-2 m-2 uppercase rounded-lg">About</button>
+            </li>
+            <li class="flex justify-center items-center">
+              <button class="px-5 py-2 m-2 uppercase rounded-lg">Jobs</button>
+            </li>
+            <li class="flex justify-center items-center">
+              <button class="px-5 py-2 m-2 uppercase rounded-lg">News</button>
+            </li>
+            <li class="flex justify-center items-center">
+              <button class="px-5 py-2 m-2 uppercase rounded-lg">
+                Contact
+              </button>
+            </li>
+            <li class="flex justify-center items-center">
+              <button
+                class="px-5 py-2 m-2 uppercase border border-white rounded-lg"
+              >
+                Register
+              </button>
+            </li>
+            <li class="flex justify-center items-center">
+              <button
+                class="px-8 py-2 m-2 uppercase rounded-lg"
+                style="background-color: #1877f2; border-color: #1877f2"
+              >
+                Login
+              </button>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="header-sidebar bg-cover"
+        style="background-image: url('./assert/banner.jpeg')"
+      >
+        <div class="container mx-auto  flex item-center justify-center">
+            <div class="w-full  text-white" style="padding: 180px 0px 180px 0px;" >
+                <div class="text-6xl font-bold my-10">
+                    <h1 class="text-6xl font-bold my-3">About</h1>
+                </div>
+                
+            </div>
+        </div>
+      </div>
+    </header>
+    
+   
+   
+    <section class="w-full discover flex item-center justify-center py-5">
+        <div class="container  flex-col text-center">
+            <div class="flex item-center justify-center flex-col mb-10">
+                <p class="text-5xl font-bold py-3 my-2">Discover jobs for you</p>
+                <i class="text-sm font-light py-3">Browse 200+ Top Jobs In Your Local City.</i>
+                <input type="file" id="fileInput" style="display: none;" />
+            </div>
+            
+            <div class="grid grid-cols-4 gap-4">
+                <div>
+                    <div class="flex flex-col border text-left border-gray-500 rounded-xl">
+                        <div class="p-5">
+                            <div class="my-3">
+                                <p class="font-bold mb-2">
+                                    Job category
+                                </p>
+                                <select id="countries" class="bg-white text-black text-sm rounded-lg border border-blue-500 block w-full p-4  ">
+                                    <option selected>Category</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="FR">France</option>
+                                    <option value="DE">Germany</option>
+                                  </select>
+                            </div>
+                            <div class="my-3">
+                                <p class="font-bold mb-2">
+                                    Job Type
+                                </p>
+                                <form>
+                                    <div class="my-3">
+                                        <input id="full-time" type="checkbox" value="full-time"  class="mr-2"/>
+                                        <label for="full-time">Full time</label>
+                                    </div>
+                                    <div class="my-3">
+                                        <input id="part-time" type="checkbox" value="part-time"  class="mr-2"/>
+                                        <label for="part-time">Part time</label>
+                                    </div>
+                                    <div class="my-3">
+                                        <input id="remote" type="checkbox" value="remote"  class="mr-2"/>
+                                        <label for="remote">Remote</label>
+                                    </div>
+                                    <div class="my-3">
+                                        <input id="freelance" type="checkbox" value="freelance"  class="mr-2"/>
+                                        <label for="freelance">Freelance</label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="my-3">
+                                <p class="font-bold mb-2">
+                                    Job location
+                                </p>
+                                <select id="countries" class="bg-white text-black text-sm rounded-lg border border-blue-500 block w-full p-4  ">
+                                    <option selected>Category</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="FR">France</option>
+                                    <option value="DE">Germany</option>
+                                </select>
+                            </div>
+                            <div class="my-3">
+                                <p class="font-bold mb-2">
+                                    Experience
+                                </p>
+                                <form>
+                                    <div class="my-3">
+                                        <input id="full-time" type="checkbox" value="full-time"  class="mr-2"/>
+                                        <label for="full-time">1 - 2 Years</label>
+                                    </div>
+                                    <div class="my-3">
+                                        <input id="part-time" type="checkbox" value="part-time"  class="mr-2"/>
+                                        <label for="part-time">2 - 3 Years</label>
+                                    </div>
+                                    <div class="my-3">
+                                        <input id="remote" type="checkbox" value="remote"  class="mr-2"/>
+                                        <label for="remote">3 - 6 Years</label>
+                                    </div>
+                                    <div class="my-3">
+                                        <input id="freelance" type="checkbox" value="freelance"  class="mr-2"/>
+                                        <label for="freelance">6 - more...</label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="my-3">
+                                <p class="font-bold mb-2">
+                                    Posted within
+                                </p>
+                                <form>
+                                    <div class="my-3">
+                                        <input id="full-time" type="checkbox" value="full-time"  class="mr-2"/>
+                                        <label for="full-time">Any</label>
+                                    </div>
+                                    <div class="my-3">
+                                        <input id="part-time" type="checkbox" value="part-time"  class="mr-2"/>
+                                        <label for="part-time">Today</label>
+                                    </div>
+                                    <div class="my-3">
+                                        <input id="remote" type="checkbox" value="remote"  class="mr-2"/>
+                                        <label for="remote">Last 2 days</label>
+                                    </div>
+                                    <div class="my-3">
+                                        <input id="freelance" type="checkbox" value="freelance"  class="mr-2"/>
+                                        <label for="freelance">Last 3 days</label>
+                                    </div>
+                                    <div class="my-3">
+                                        <input id="freelance" type="checkbox" value="freelance"  class="mr-2"/>
+                                        <label for="freelance">Last 5 days</label>
+                                    </div>
+                                    <div class="my-3">
+                                        <input id="freelance" type="checkbox" value="freelance"  class="mr-2"/>
+                                        <label for="freelance">Last 10 days</label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="my-3">
+                                <p class="font-bold mb-2">
+                                    Range
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-3 grid grid-cols-1 gap-7">
+                    <div class="text-left w-full p-6 bg-white border border-gray-200 rounded-lg shadow flex flex-row">
+                        <div class="w-full"><div class="flex item-center  my-3">
+                            <p class=" text-xs py-1 px-5 font-medium text-center text-black border border-gray-500 rounded-lg mx-2 ">tag</p>
+                            <div class="text-gray-500 mx-2 ">2h ago</div>
+                        </div>
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-black ">Noteworthy technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> <i class="fa fa-map-marker"></i>
+                            Hanoi, VietNam</p>
+                        </div>
+                        <div class="">
+                            <a href="#" class="my-10 inline-flex items-center max-h-10 px-8 py-5 text-sm font-medium  bg-blue-700 rounded-lg bg-gray-300 text-blue-500">
+                                Apply
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="text-left w-full p-6 bg-white border border-gray-200 rounded-lg shadow flex flex-row">
+                        <div class="w-full"><div class="flex item-center  my-3">
+                            <p class=" text-xs py-1 px-5 font-medium text-center text-black border border-gray-500 rounded-lg mx-2 ">tag</p>
+                            <div class="text-gray-500 mx-2 ">2h ago</div>
+                        </div>
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-black ">Noteworthy technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> <i class="fa fa-map-marker"></i>
+                            Hanoi, VietNam</p>
+                        </div>
+                        <div class="">
+                            <a href="#" class="my-10 inline-flex items-center max-h-10 px-8 py-5 text-sm font-medium  bg-blue-700 rounded-lg bg-gray-300 text-blue-500">
+                                Apply
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="text-left w-full p-6 bg-white border border-gray-200 rounded-lg shadow flex flex-row">
+                        <div class="w-full"><div class="flex item-center  my-3">
+                            <p class=" text-xs py-1 px-5 font-medium text-center text-black border border-gray-500 rounded-lg mx-2 ">tag</p>
+                            <div class="text-gray-500 mx-2 ">2h ago</div>
+                        </div>
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-black ">Noteworthy technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> <i class="fa fa-map-marker"></i>
+                            Hanoi, VietNam</p>
+                        </div>
+                        <div class="">
+                            <a href="#" class="my-10 inline-flex items-center max-h-10 px-8 py-5 text-sm font-medium  bg-blue-700 rounded-lg bg-gray-300 text-blue-500">
+                                Apply
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="text-left w-full p-6 bg-white border border-gray-200 rounded-lg shadow flex flex-row">
+                        <div class="w-full"><div class="flex item-center  my-3">
+                            <p class=" text-xs py-1 px-5 font-medium text-center text-black border border-gray-500 rounded-lg mx-2 ">tag</p>
+                            <div class="text-gray-500 mx-2 ">2h ago</div>
+                        </div>
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-black ">Noteworthy technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> <i class="fa fa-map-marker"></i>
+                            Hanoi, VietNam</p>
+                        </div>
+                        <div class="">
+                            <a href="#" class="my-10 inline-flex items-center max-h-10 px-8 py-5 text-sm font-medium  bg-blue-700 rounded-lg bg-gray-300 text-blue-500">
+                                Apply
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="text-left w-full p-6 bg-white border border-gray-200 rounded-lg shadow flex flex-row">
+                        <div class="w-full"><div class="flex item-center  my-3">
+                            <p class=" text-xs py-1 px-5 font-medium text-center text-black border border-gray-500 rounded-lg mx-2 ">tag</p>
+                            <div class="text-gray-500 mx-2 ">2h ago</div>
+                        </div>
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-black ">Noteworthy technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> <i class="fa fa-map-marker"></i>
+                            Hanoi, VietNam</p>
+                        </div>
+                        <div class="">
+                            <a href="#" class="my-10 inline-flex items-center max-h-10 px-8 py-5 text-sm font-medium  bg-blue-700 rounded-lg bg-gray-300 text-blue-500">
+                                Apply
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <nav aria-label="flex item-center justify-center w-full">
+                        <ul class="flex items-center -space-x-px h-8 text-sm">
+                          <li>
+                            <a href="#" class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                              <span class="sr-only">Previous</span>
+                              <svg class="w-2.5 h-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                              </svg>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                          </li>
+                          <li>
+                            <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                          </li>
+                          <li>
+                            <a href="#" aria-current="page" class="z-10 flex items-center justify-center px-3 h-8 leading-tight text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+                          </li>
+                          <li>
+                            <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+                          </li>
+                          <li>
+                            <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+                          </li>
+                          <li>
+                            <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                              <span class="sr-only">Next</span>
+                              <svg class="w-2.5 h-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                              </svg>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="w-full discover flex item-center justify-center py-5">
+        <div class="container  flex-col text-center">
+            <div class="flex item-center justify-center flex-col">
+                <p class="text-5xl font-bold py-3 my-3">Upload your CV</p>
+                <input type="file" id="fileInput" style="display: none;" />
+
+            </div>
+            <div class="my-6">
+                <div class="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto  bg-white  rounded-md text-[#333] font-[sans-serif]">
+                    <div class="rounded-3xl border border-gray-200" id="uploadContainer">
+                      <div class="flex flex-col justify-center items-center py-40 ">
+                        <div>
+                            <img alt="" src="./assert/upload.png" width="48" height="48"/>
+                        </div>
+                        <h1 class="font-bold text-xl">TẢI CV</h1>
+                        <p class="max-w-sm text-sm">Chọn hoặc kéo thả file CV tại đây, Dung lượng file không quá 500M</p>
+                        <div class="file-name" id="fileName"></div>
+                      </div>
+                    </div>
+                    <form class="ml-auo space-y-4">
+                       <div class="grid xs:grid-cols-1 md:grid-cols-2 gap-3">
+                            <input type='text' placeholder='Họ Tên'
+                            class="w-full rounded-md py-4 px-4 border text-sm outline-[#007bff]" />
+                            <input type='email' placeholder='Email'
+                            class="w-full rounded-md py-4 px-4 border text-sm outline-[#007bff]" />
+                       </div>
+                        <input type='text' placeholder='Số điện thoại'
+                            class="w-full rounded-md py-4 px-4 border text-sm outline-[#007bff]" />
+                            <select id="countries" class="bg-white text-black text-sm rounded-lg border border-blue-500 block w-full p-4  ">
+                                <option selected>Category</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                              </select>
+                            <textarea placeholder='Mô tả hoặc yêu cầu' rows="8"
+                            class="w-full rounded-md px-4 border text-sm pt-2.5 outline-[#007bff]"></textarea>
+                         <div class="w-full flex flex-row item-start"><button type='button'
+                            class="text-white bg-[#007bff] hover:bg-blue-600 font-semibold rounded-md text-sm px-6 py-3.5  max-w-2xl">Upload your CV</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    
+
+<footer class="bg-white dark:bg-gray-900">
+    <div class="mx-auto w-full container text-white">
+      <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">About</h2>
+            <p class="font-light ">Far far away, behind the word
+                mountains, far from the countries
+                Vokalia and Consonantia, there live
+                the blind texts.</p>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                Employers
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Discord Server</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Twitter</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Facebook</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Workers</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Licensing</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">iOS</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Android</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Windows</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">MacOS</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="text-center flex item-center justify-center">
+        <p class="text-center p-7">Copyright ©2024 All rights reserved  </p>
+    </div>
+</footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('[role="tab"]');
+            const tabPanels = document.querySelectorAll('[role="tabpanel"]');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Hide all tab panels
+                    tabPanels.forEach(panel => panel.classList.add('hidden'));
+                    tabPanels.forEach(panel => panel.classList.remove('block'));
+
+                    // Show the selected tab panel
+                    const tabPanel = document.querySelector(button.getAttribute('data-tabs-target'));
+                    tabPanel.classList.remove('hidden');
+                    tabPanel.classList.add('block');
+
+                    // Update the selected state of the tabs
+                    tabButtons.forEach(btn => btn.setAttribute('aria-selected', 'false'));
+                    button.setAttribute('aria-selected', 'true');
+                });
+            });
+        });
+
+
+        const uploadContainer = document.getElementById('uploadContainer');
+    const fileInput = document.getElementById('fileInput');
+    const fileNameDisplay = document.getElementById('fileName');
+
+    // Show file dialog when clicking the container
+    uploadContainer.addEventListener('click', () => {
+        fileInput.click();
+    });
+
+    // Highlight the drop area when a file is dragged over it
+    uploadContainer.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        uploadContainer.classList.add('dragover');
+    });
+
+    // Remove the highlight when the file is no longer dragged over the drop area
+    uploadContainer.addEventListener('dragleave', () => {
+        uploadContainer.classList.remove('dragover');
+    });
+
+    // Handle the dropped files
+    uploadContainer.addEventListener('drop', (e) => {
+        e.preventDefault();
+        uploadContainer.classList.remove('dragover');
+
+        const files = e.dataTransfer.files;
+        handleFiles(files);
+    });
+
+    // Handle file selection via input
+    fileInput.addEventListener('change', (e) => {
+        const files = e.target.files;
+        handleFiles(files);
+    });
+
+    function handleFiles(files) {
+        if (files.length > 0) {
+            const file = files[0];
+            if (file.size <= 500 * 1024 * 1024) { // Check file size (500MB)
+                // Display the file name
+                fileNameDisplay.textContent = `File đã chọn: ${file.name}`;
+            } else {
+                alert('Dung lượng file vượt quá 500MB');
+                fileNameDisplay.textContent = '';
+            }
+        }
+    }
+    </script>
+  </body>
+</html>
