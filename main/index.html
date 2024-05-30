@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .hidden { display: none; }
+        .block { display: block; }
+    </style>
+  </head>
+  <body class="">
+    <header class="header">
+      <nav class="header-navbar w-full flex flex-row item-center py-3 fixed">
+        <div class="container mx-auto flex flex-row item-center justify-between">
+          <img
+            alt=""
+            src="./assert/logo.png"
+          
+            class="py-3 m-2"
+          />
+
+          <div class="flex items-center lg:order-2">
+            <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+         </div>
+          <div class="hidden"  id="mobile-menu-2">
+            <ul
+            class="navbar-button list-none grid grid-cols-7 bg-red text-sm text-white " 
+          >
+            <li class="flex justify-center items-center">
+              <button class="px-5 py-2 m-2 uppercase rounded-lg">Home</button>
+            </li>
+            <li class="flex justify-center items-center">
+              <button class="px-5 py-2 m-2 uppercase rounded-lg">About</button>
+            </li>
+            <li class="flex justify-center items-center">
+              <button class="px-5 py-2 m-2 uppercase rounded-lg">Jobs</button>
+            </li>
+            <li class="flex justify-center items-center">
+              <button class="px-5 py-2 m-2 uppercase rounded-lg">News</button>
+            </li>
+            <li class="flex justify-center items-center">
+              <button class="px-5 py-2 m-2 uppercase rounded-lg">
+                Contact
+              </button>
+            </li>
+            <li class="flex justify-center items-center">
+              <button
+                class="px-5 py-2 m-2 uppercase border border-white rounded-lg"
+              >
+                Register
+              </button>
+            </li>
+            <li class="flex justify-center items-center">
+              <button
+                class="px-8 py-2 m-2 uppercase rounded-lg"
+                style="background-color: #1877f2; border-color: #1877f2"
+              >
+                Login
+              </button>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="header-sidebar bg-cover"
+        style="background-image: url('./assert/banner.jpeg')"
+      >
+        <div class="container mx-auto  flex item-center justify-center">
+            <div class="w-full  text-white" style="padding: 200px 0px 200px 0px;" >
+                <p class="my-5">We have 188,457 great job offers you deserve!</p>
+                <div class="text-6xl font-bold my-10">
+                    <h1 class="text-6xl font-bold my-3">Your Dream</h1>
+                    <h1 class="text-6xl font-light my-3">Job is Waiting</h1>
+                </div>
+                <div class="my-10 max-w-5xl">
+                    <div class=" border-b border-white ">
+                        <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab" role="tablist">
+                            <li class="me-2" role="presentation">
+                                <button class="inline-block py-4 text-lg border-b-2 bg-white text-black rounded-t-lg px-10" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">Find a Job</button>
+                            </li>
+                            <li class="me-2" role="presentation">
+                                <button style="background-color: #1877F2;" class="inline-block py-4 text-lg px-10  border-b-1 rounded-t-lg " id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Find a Candidate</button>
+                            </li>               
+                        </ul>
+                    </div>
+                    <div id="default-tab-content">
+                        <div class="block p-4 rounded-b-lg	bg-white " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <form class="grid grid-cols-1 xl:grid-cols-4 gap-3 ">   
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 ">
+                                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                                        </svg>
+                                    </div>
+                                    <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-black border border-gray-300 rounded-lg    dark:border-gray-600 dark:placeholder-gray-400  " placeholder="Search Mockups, Logos..." required />
+                                </div>
+                                <select id="countries" class="bg-white text-black text-sm rounded-lg border border-blue-500 block w-full p-2.5  ">
+                                  <option selected>Category</option>
+                                  <option value="US">United States</option>
+                                  <option value="CA">Canada</option>
+                                  <option value="FR">France</option>
+                                  <option value="DE">Germany</option>
+                                </select>
+                                <select id="countries" class="bg-white  text-black text-sm rounded-lg border border-blue-500  block w-full p-2.5 ">
+                                    <option selected>Location</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="FR">France</option>
+                                    <option value="DE">Germany</option>
+                                </select>
+                                <div class="w-full"><button type="button" class="px-6 py-3.5 text-base font-medium w-full text-white bg-blue-700  text-center rounded-lg ">Extra large</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="hidden p-4 rounded-b-lg	bg-white" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                            <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </header>
+    
+   
+
+    <section class="w-full discover flex item-center justify-center py-5">
+        <div class="container  flex-col text-center">
+            <div class="flex item-center justify-center flex-col">
+                <p class="text-5xl font-bold py-3 my-3">Discover jobs for you</p>
+                <i class="py-1 ">Browse 200+ Top Jobs In Your Local City.</i>
+                <div class="flex my-4 flex-row item-center justify-center w-full">
+                    <button type="button" class="mx-1 px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">Extra small</button>
+                    <button type="button" class="mx-1 px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">Extra small</button>
+                    <button type="button" class="mx-1 px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">Extra small</button>
+                    <button type="button" class="mx-1 px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">Extra small</button>
+                    <button type="button" class="mx-1 px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">Extra small</button>
+                    <button type="button" class="mx-1 px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">Extra small</button>
+                    <button type="button" class="mx-1 px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800">Extra small</button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="text-left w-full p-6 bg-white border border-gray-200 rounded-lg shadow ">
+                        <div class="flex item-center justify-between my-3">
+                            <p class=" text-xs py-1 px-5 font-medium text-center text-black border border-gray-500 rounded-lg ">tag</p>
+                            <div class="text-gray-500">2h ago</div>
+                        </div>
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-black ">Noteworthy technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> <i class="fa fa-map-marker"></i>
+                            Hanoi, VietNam</p>
+                        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Read more
+                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="text-left w-full p-6 bg-white border border-gray-200 rounded-lg shadow ">
+                        <div class="flex item-center justify-between my-3">
+                            <p class=" text-xs py-1 px-5 font-medium text-center text-black border border-gray-500 rounded-lg ">tag</p>
+                            <div class="text-gray-500">2h ago</div>
+                        </div>
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-black ">Noteworthy technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> <i class="fa fa-map-marker"></i>
+                            Hanoi, VietNam</p>
+                        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Read more
+                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="text-left w-full p-6 bg-white border border-gray-200 rounded-lg shadow ">
+                        <div class="flex item-center justify-between my-3">
+                            <p class=" text-xs py-1 px-5 font-medium text-center text-black border border-gray-500 rounded-lg ">tag</p>
+                            <div class="text-gray-500">2h ago</div>
+                        </div>
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-black ">Noteworthy technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> <i class="fa fa-map-marker"></i>
+                            Hanoi, VietNam</p>
+                        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Read more
+                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="text-left w-full p-6 bg-white border border-gray-200 rounded-lg shadow ">
+                        <div class="flex item-center justify-between my-3">
+                            <p class=" text-xs py-1 px-5 font-medium text-center text-black border border-gray-500 rounded-lg ">tag</p>
+                            <div class="text-gray-500">2h ago</div>
+                        </div>
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-black ">Noteworthy technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> <i class="fa fa-map-marker"></i>
+                            Hanoi, VietNam</p>
+                        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Read more
+                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="text-left w-full p-6 bg-white border border-gray-200 rounded-lg shadow ">
+                        <div class="flex item-center justify-between my-3">
+                            <p class=" text-xs py-1 px-5 font-medium text-center text-black border border-gray-500 rounded-lg ">tag</p>
+                            <div class="text-gray-500">2h ago</div>
+                        </div>
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-black ">Noteworthy technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> <i class="fa fa-map-marker"></i>
+                            Hanoi, VietNam</p>
+                        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Read more
+                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="text-left w-full p-6 bg-white border border-gray-200 rounded-lg shadow ">
+                        <div class="flex item-center justify-between my-3">
+                            <p class=" text-xs py-1 px-5 font-medium text-center text-black border border-gray-500 rounded-lg ">tag</p>
+                            <div class="text-gray-500">2h ago</div>
+                        </div>
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-black ">Noteworthy technology acquisitions 2021</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> <i class="fa fa-map-marker"></i>
+                            Hanoi, VietNam</p>
+                        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Read more
+                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                </div>
+                <div class="my-5 ">
+                    <button type="button" class="px-12 py-3.5 text-base font-medium text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Find more !</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full discover flex item-center justify-center py-5">
+        <div class="container  flex-col text-center">
+            <div class="flex item-center justify-center flex-col">
+                <p class="text-5xl font-bold py-3 my-3">Our blog</p>
+            </div>
+            <div class=" text-left  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="w-full bg-white border border-gray-200 rounded-lg shadow ">
+                        <a href="#">
+                            <img class="rounded-t-lg" src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="" />
+                        </a>
+                        <div class="p-5">
+                            <p class="text-gray-500"> <i class="fa fa-clock-o"></i>
+                                25 thg 2, 2024</p>
+
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-black ">Noteworthy technology acquisitions 2021</h5>
+                            </a>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                           
+                        </div>
+                    </div>
+
+                    <div class="w-full bg-white border border-gray-200 rounded-lg shadow ">
+                        <a href="#">
+                            <img class="rounded-t-lg" src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="" />
+                        </a>
+                        <div class="p-5">
+                            <p class="text-gray-500"> <i class="fa fa-clock-o"></i>
+                                25 thg 2, 2024</p>
+
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-black ">Noteworthy technology acquisitions 2021</h5>
+                            </a>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                           
+                        </div>
+                    </div>
+
+                    <div class="w-full bg-white border border-gray-200 rounded-lg shadow ">
+                        <a href="#">
+                            <img class="rounded-t-lg" src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="" />
+                        </a>
+                        <div class="p-5">
+                            <p class="text-gray-500"> <i class="fa fa-clock-o"></i>
+                                25 thg 2, 2024</p>
+
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-black ">Noteworthy technology acquisitions 2021</h5>
+                            </a>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                           
+                        </div>
+                    </div>
+
+                    <div class="w-full bg-white border border-gray-200 rounded-lg shadow ">
+                        <a href="#">
+                            <img class="rounded-t-lg" src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="" />
+                        </a>
+                        <div class="p-5">
+                            <p class="text-gray-500"> <i class="fa fa-clock-o"></i>
+                                25 thg 2, 2024</p>
+
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-black ">Noteworthy technology acquisitions 2021</h5>
+                            </a>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                           
+                        </div>
+                    </div>
+
+                    <div class="w-full bg-white border border-gray-200 rounded-lg shadow ">
+                        <a href="#">
+                            <img class="rounded-t-lg" src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="" />
+                        </a>
+                        <div class="p-5">
+                            <p class="text-gray-500"> <i class="fa fa-clock-o"></i>
+                                25 thg 2, 2024</p>
+
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-black ">Noteworthy technology acquisitions 2021</h5>
+                            </a>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                           
+                        </div>
+                    </div>
+
+                    <div class="w-full bg-white border border-gray-200 rounded-lg shadow ">
+                        <a href="#">
+                            <img class="rounded-t-lg" src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="" />
+                        </a>
+                        <div class="p-5">
+                            <p class="text-gray-500"> <i class="fa fa-clock-o"></i>
+                                25 thg 2, 2024</p>
+
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-black ">Noteworthy technology acquisitions 2021</h5>
+                            </a>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                           
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full  discover flex item-center justify-center py-5">
+        <div class="container  text-white flex-col text-center grid grid-cols-1 md:grid-cols-2 gap-10 lg:grid-cols-4  rounded-lg   p-16   shadow" style="background-color: #1877F2;">
+            <div class="">
+                <p class="font-bold text-4xl mb-4">1,500,00</p>
+                <i>Jobs</i>
+            </div>
+            <div>
+                <p class="font-bold text-4xl mb-4">40,000</p>
+                <i>Members</i>
+            </div>
+            <div>
+                <p class="font-bold text-4xl mb-4">30,000</p>
+                <i>Resume</i>
+            </div>
+            <div>
+                <p class="font-bold text-4xl mb-4 ">10,500</p>
+                <i>Company</i>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-white text-black">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+            <div class="mx-auto max-w-screen-md sm:text-center">
+                <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl">Subscribe our newsletter to get updates about latest jobs</h2>
+                <p class="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-12 sm:text-sm ">Go house hunting with confidence thanks to all the information that experts normally keep to themselves. Check the facts and figures whenever you want, from wherever you want. With the data of Walter you’ll make smarter choices when hunting for a home.</p>
+                <form class="max-w-2xl mx-auto">   
+                    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M2.038 5.61A2.01 2.01 0 0 0 2 6v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6c0-.12-.01-.238-.03-.352l-.866.65-7.89 6.032a2 2 0 0 1-2.429 0L2.884 6.288l-.846-.677Z"/>
+                                <path d="M20.677 4.117A1.996 1.996 0 0 0 20 4H4c-.225 0-.44.037-.642.105l.758.607L12 10.742 19.9 4.7l.777-.583Z"/>
+                              </svg>
+                              
+                        </div>
+                        <input type="search" id="default-search" class="block w-full p-6 ps-10 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your email..." required />
+                        <button type="submit" class="text-white absolute end-2.5 bottom-2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm px-5 py-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 flex item-center justify-center"> <p class="my-1">Subcribe</p> <svg class="text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="28" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </section>
+
+    <section class="w-full discover flex item-center justify-center py-5">
+        <div class="container  flex-col text-center">
+            <div class="flex item-center justify-center flex-col">
+                <p class="text-5xl font-bold py-3 my-3">Upload your CV</p>
+                <input type="file" id="fileInput" style="display: none;" />
+
+            </div>
+            <div class="my-6">
+                <div class="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto  bg-white  rounded-md text-[#333] font-[sans-serif]">
+                    <div class="rounded-3xl border border-gray-200" id="uploadContainer">
+                      <div class="flex flex-col justify-center items-center py-40 ">
+                        <div>
+                            <img alt="" src="./assert/upload.png" width="48" height="48"/>
+                        </div>
+                        <h1 class="font-bold text-xl">TẢI CV</h1>
+                        <p class="max-w-sm text-sm">Chọn hoặc kéo thả file CV tại đây, Dung lượng file không quá 500M</p>
+                        <div class="file-name" id="fileName"></div>
+                      </div>
+                    </div>
+                    <form class="ml-auo space-y-4">
+                       <div class="grid xs:grid-cols-1 md:grid-cols-2 gap-3">
+                            <input type='text' placeholder='Họ Tên'
+                            class="w-full rounded-md py-4 px-4 border text-sm outline-[#007bff]" />
+                            <input type='email' placeholder='Email'
+                            class="w-full rounded-md py-4 px-4 border text-sm outline-[#007bff]" />
+                       </div>
+                        <input type='text' placeholder='Số điện thoại'
+                            class="w-full rounded-md py-4 px-4 border text-sm outline-[#007bff]" />
+                            <select id="countries" class="bg-white text-black text-sm rounded-lg border border-blue-500 block w-full p-4  ">
+                                <option selected>Category</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                              </select>
+                            <textarea placeholder='Mô tả hoặc yêu cầu' rows="8"
+                            class="w-full rounded-md px-4 border text-sm pt-2.5 outline-[#007bff]"></textarea>
+                         <div class="w-full flex flex-row item-start"><button type='button'
+                            class="text-white bg-[#007bff] hover:bg-blue-600 font-semibold rounded-md text-sm px-6 py-3.5  max-w-2xl">Upload your CV</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   
+    
+
+<footer class="bg-white dark:bg-gray-900">
+    <div class="mx-auto w-full container text-white">
+      <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">About</h2>
+            <p class="font-light ">Far far away, behind the word
+                mountains, far from the countries
+                Vokalia and Consonantia, there live
+                the blind texts.</p>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                Employers
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Discord Server</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Twitter</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Facebook</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Workers</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Licensing</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">iOS</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Android</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">Windows</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:underline">MacOS</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="text-center flex item-center justify-center">
+        <p class="text-center p-7">Copyright ©2024 All rights reserved  </p>
+    </div>
+</footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('[role="tab"]');
+            const tabPanels = document.querySelectorAll('[role="tabpanel"]');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Hide all tab panels
+                    tabPanels.forEach(panel => panel.classList.add('hidden'));
+                    tabPanels.forEach(panel => panel.classList.remove('block'));
+
+                    // Show the selected tab panel
+                    const tabPanel = document.querySelector(button.getAttribute('data-tabs-target'));
+                    tabPanel.classList.remove('hidden');
+                    tabPanel.classList.add('block');
+
+                    // Update the selected state of the tabs
+                    tabButtons.forEach(btn => btn.setAttribute('aria-selected', 'false'));
+                    button.setAttribute('aria-selected', 'true');
+                });
+            });
+        });
+
+
+        const uploadContainer = document.getElementById('uploadContainer');
+    const fileInput = document.getElementById('fileInput');
+    const fileNameDisplay = document.getElementById('fileName');
+
+    // Show file dialog when clicking the container
+    uploadContainer.addEventListener('click', () => {
+        fileInput.click();
+    });
+
+    // Highlight the drop area when a file is dragged over it
+    uploadContainer.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        uploadContainer.classList.add('dragover');
+    });
+
+    // Remove the highlight when the file is no longer dragged over the drop area
+    uploadContainer.addEventListener('dragleave', () => {
+        uploadContainer.classList.remove('dragover');
+    });
+
+    // Handle the dropped files
+    uploadContainer.addEventListener('drop', (e) => {
+        e.preventDefault();
+        uploadContainer.classList.remove('dragover');
+
+        const files = e.dataTransfer.files;
+        handleFiles(files);
+    });
+
+    // Handle file selection via input
+    fileInput.addEventListener('change', (e) => {
+        const files = e.target.files;
+        handleFiles(files);
+    });
+
+    function handleFiles(files) {
+        if (files.length > 0) {
+            const file = files[0];
+            if (file.size <= 500 * 1024 * 1024) { // Check file size (500MB)
+                // Display the file name
+                fileNameDisplay.textContent = `File đã chọn: ${file.name}`;
+            } else {
+                alert('Dung lượng file vượt quá 500MB');
+                fileNameDisplay.textContent = '';
+            }
+        }
+    }
+    </script>
+  </body>
+</html>
