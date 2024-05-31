@@ -6,7 +6,15 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+     <!-- Slick CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- Slick JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <style>
         .hidden { display: none; }
         .block { display: block; }
@@ -91,12 +99,12 @@
             <div class="hidden xl:block">            
                 <img  alt="" class=" rounded-3xl w-[675px] h-[675px] "  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBt8fP-rj4FxQk6K2sd45A7mNhqjPpIj-sTA&s" />
             </div>
-            <div class="p-24">
+            <div class="p-1 xl:p-24">
                 <span class="uppercase font-medium my-6" style="color: #1877F2;">WHAT WE ARE DOING</span>
                 <h1 class="font-bold text-3xl my-6">24k Talented people are getting Jobs</h1>
                 <p class=" text-xl">Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada duis volutpat.Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat. </p>
             </div>
-            <div class="p-24">
+            <div class="p-1 xl:p-24">
                 <h1 class="font-bold text-3xl my-6">We help companies to find talents</h1>
                 <p class=" text-xl">We collect reviews from our users so you can get an honest opinion of what an experience with our website are really like!</p>
             </div>
@@ -138,8 +146,8 @@
 
 
     <section class="bg-white text-black">
-        <div class="py-8 px-4 mx-auto container lg:py-16 lg:px-6 grid grid-cols-3 gap-14">
-            <div class="mx-auto max-w-screen-md">
+        <div class="slider py-8 px-4 mx-auto container lg:py-16 lg:px-6 grid  gap-14">
+            <div class="mx-auto max-w-screen-md ">
                 <div
                 class="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
                 <div
@@ -225,6 +233,37 @@
                         Nền tảng tuyển dụng của Asura là minh chứng cho cam kết của họ trong việc tìm kiếm những tài năng tốt nhất. Giao diện người dùng rất dễ sử dụng, cho phép ứng viên dễ dàng duyệt qua các vị trí có sẵn và khám phá các mô tả công việc chi tiết
                     </p>
                 </div>
+                
+                </div>  
+            </div>
+
+            <div class="mx-auto max-w-screen-md sm:text-center">
+                <div
+                class="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
+                <div
+                    class="relative flex items-center gap-4 pt-0 pb-8 mx-0 mt-4 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
+                    <img
+                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
+                    alt="Tania Andrew"
+                    class="relative inline-block h-[58px] w-[58px] !rounded-full  object-cover object-center" />
+                    <div class="flex w-full flex-col gap-0.5">
+                    <div class="flex items-center justify-between">
+                        <h5
+                        class="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                        Tania Andrew
+                        </h5>
+                       
+                    </div>
+                    </div>
+                </div>
+                <div class="p-0 mb-6 flex">
+                    <i class="fa fa-quote-left mr-3"></i>
+                    <p class="block font-sans text-base antialiased font-light leading-relaxed text-inherit text-left text-sm">
+
+                        Nền tảng tuyển dụng của Asura là minh chứng cho cam kết của họ trong việc tìm kiếm những tài năng tốt nhất. Giao diện người dùng rất dễ sử dụng, cho phép ứng viên dễ dàng duyệt qua các vị trí có sẵn và khám phá các mô tả công việc chi tiết
+                    </p>
+                </div>
+                
                 </div>  
             </div>
         </div>
@@ -301,7 +340,7 @@
 </footer>
 
 
-    <script>
+    <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', () => {
             const tabButtons = document.querySelectorAll('[role="tab"]');
             const tabPanels = document.querySelectorAll('[role="tabpanel"]');
@@ -325,39 +364,30 @@
         });
 
 
-        const uploadContainer = document.getElementById('uploadContainer');
-    const fileInput = document.getElementById('fileInput');
-    const fileNameDisplay = document.getElementById('fileName');
+     
 
-    // Show file dialog when clicking the container
-    uploadContainer.addEventListener('click', () => {
-        fileInput.click();
-    });
-
-    // Highlight the drop area when a file is dragged over it
-    uploadContainer.addEventListener('dragover', (e) => {
-        e.preventDefault();
-        uploadContainer.classList.add('dragover');
-    });
-
-    // Remove the highlight when the file is no longer dragged over the drop area
-    uploadContainer.addEventListener('dragleave', () => {
-        uploadContainer.classList.remove('dragover');
-    });
-
-    // Handle the dropped files
-    uploadContainer.addEventListener('drop', (e) => {
-        e.preventDefault();
-        uploadContainer.classList.remove('dragover');
-
-        const files = e.dataTransfer.files;
-        handleFiles(files);
-    });
-
-    // Handle file selection via input
-    fileInput.addEventListener('change', (e) => {
-        const files = e.target.files;
-        handleFiles(files);
+    $(document).ready(function(){
+      $('.slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3, // Show 3 slides on larger screens
+        adaptiveHeight: true,
+        responsive: [
+          {
+            breakpoint: 768, // Screen width at which settings below apply
+            settings: {
+              slidesToShow: 1, // Show 1 slide on screens smaller than 768px
+            }
+          },
+          {
+            breakpoint: 1280, // Screen width at which settings below apply
+            settings: {
+              slidesToShow: 2, // Show 1 slide on screens smaller than 768px
+            }
+          }
+        ]
+      });
     });
 
     function handleFiles(files) {
